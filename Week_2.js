@@ -1,2 +1,6 @@
-// added some comments to test out github!
-// Third commit was to mearly test my skills with github.!
+// Start of actual project
+// Author: Cory Green
+// Date: 02/06/2012
+// Project: Week 2
+// Class: Scalable Data Infrastructures
+
