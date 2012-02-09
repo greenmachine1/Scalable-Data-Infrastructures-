@@ -7,8 +7,17 @@
 // Project has a main function in which all the functions will come back to an return
 // a data type or do something.
 // Will start with pseudocode that will actually get filled afterwards
-// 
+// Project is me getting out of bed and working towards the rest of my day.
 
+
+
+var theCurrentTime = 1500;
+
+
+
+// First function asks if my cat scooter has jumped on me to wake me up
+// If he has, then it must be time to wake up
+// If not then I have a few more hours left to sleep
 var getOutOfBed = function (scooter)
 {
 	if (scooter === true)
@@ -22,25 +31,28 @@ var getOutOfBed = function (scooter)
 	}
 }
 
-getOutOfBed(true);
-
-/*return nothing;
-}
-
-boolean function ( 2 arguments to be passed )
+// Function used to see if I still have time to get ready for work 
+// since it is only 1500 and I leave for work at 1515, I do have time.
+var timeToGetReady = function(time)
 {
-	if both arguments are something then
-	{
-		do something if they are comparible;
+	var outcome;
+	var timeToLeaveForWork = 1515;
+	if (timeToLeaveForWork > time)
+	{	
+		outcome = true;
 	}
-	else if
+	else
 	{
-		do something else if they are not comparible;
+		outcome = false;
 	}
-
-return value;
+	return outcome;	
 }
 
+getOutOfBed(true);
+console.log("Do I still have time to get ready for work " +
+			"Since its only " + theCurrentTime + "?" + timeToGetReady(theCurrentTime));
+
+/*
 number function ( one argument to be passed )
 {
 	declare local variables;
