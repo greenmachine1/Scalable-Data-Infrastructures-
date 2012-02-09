@@ -7,33 +7,24 @@
 // Project has a main function in which all the functions will come back to an return
 // a data type or do something.
 // Will start with pseudocode that will actually get filled afterwards
+// 
 
-Start
-declare variables
-
-procedure function
-boolean function
-number function
-string function
-array function
-
-returned values from those functions
-output
-and finish
-
-procedure function ( one argument to be passed )
+var getOutOfBed = function (scooter)
 {
-	if the argument is true then
-	{	
-		do something;
-	}
-	else if the arguement is false then
+	if (scooter === true)
 	{
-		do something else;
+		console.log("Alright, alright, it must be that time to get out of bed!");
 	}
+	else
+	{
+		console.log("Well, my cat isnt on me, so I have a few more hours left" +
+		" to sleep.");
+	}
+}
 
+getOutOfBed(true);
 
-return nothing;
+/*return nothing;
 }
 
 boolean function ( 2 arguments to be passed )
@@ -79,4 +70,6 @@ array function ( 1 number and 1 array to be passed in)
 	}
 	return array values;
 }
+
+*/
 	
