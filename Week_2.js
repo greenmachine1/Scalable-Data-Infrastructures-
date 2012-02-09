@@ -9,6 +9,9 @@
 
 var theCurrentTime = 1500, 
 	numberOfMinutes = 10;
+	
+var amandaConversation1 = "Is the coffee ready? ",
+	amandaConversation2 = "I have to leave here in 10 minutes!";
 
 
 
@@ -63,6 +66,13 @@ var brewCoffee = function(minutes)
 	return total;
 }
 
+// My wife talking about her having to leave in 10 minutes!
+var conversation = function(first, second)
+{
+	var middle = "Because "
+	var stringTotalConversation = first + middle + second;
+	return stringTotalConversation;
+}
 
 // main line of code, where all functions get called from and return to.
 getOutOfBed(true);
@@ -82,14 +92,10 @@ console.log("Do I still have time to eat something before work " +
 	}
 console.log(brewCoffee(numberOfMinutes));	
 
+console.log(conversation(amandaConversation1, amandaConversation2));
+
+
 /*
-string function (2 string arguments to be passed)
-{
-	declare local variables;
-	string concatenation;
-	
-	return string;
-}
 
 array function ( 1 number and 1 array to be passed in)
 {
