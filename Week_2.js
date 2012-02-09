@@ -48,9 +48,7 @@ var timeToGetReady = function(time)
 	return outcome;	
 }
 
-getOutOfBed(true);
-console.log("Do I still have time to get ready for work " +
-			"Since its only " + theCurrentTime + "?" + timeToGetReady(theCurrentTime));
+
 
 /*
 number function ( one argument to be passed )
@@ -64,7 +62,26 @@ number function ( one argument to be passed )
 	
 return a value;
 }
+*/
 
+
+// main line of code, where all functions get called from and return to.
+getOutOfBed(true);
+console.log("Do I still have time to get ready for work " +
+			"Since its only " + theCurrentTime + "?");
+// using if statements, im able to actually do something with the 
+// boolean return of the timeToGetReady function.
+	if (timeToGetReady(theCurrentTime) === true)
+	{
+		console.log("Yes I do!");
+	}
+	else
+	{
+		console.log("Oh no! I have to leave right now!");
+	}
+			
+
+/*
 string function (2 string arguments to be passed)
 {
 	declare local variables;
