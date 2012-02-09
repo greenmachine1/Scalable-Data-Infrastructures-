@@ -8,7 +8,7 @@
 // variable declaration
 
 var theCurrentTime = 1500, 
-	numberOfBananas = 2;
+	numberOfMinutes = 10;
 
 
 
@@ -46,20 +46,22 @@ var timeToGetReady = function(time)
 	return outcome;	
 }
 
-
-var bananaSlices = function(numberOfBananas)
+// Brew coffee function.  Basically check on coffee every 2 minutes then count
+// how many times I checked on it in that amount of time!
+var brewCoffee = function(minutes)
 {
-	var totalNumber = 0;
-	var slicesPerBanana = 4;
-	while ((numberOfBananas * slicesPerBanana) > totalNumber )
-	{
-		console.log("keep slicing bananas!");
-		totalNumber++;
-	}
+	var total;
+	var count = 2;
 	
-return totalNumber;
+	while (minutes >= count)
+	{
+		console.log("Checked on Coffee at " + count + " minutes");
+		count = count + 2;
+		total = (count / 2) - 1;
+		
+	}
+	return total;
 }
-
 
 
 // main line of code, where all functions get called from and return to.
@@ -78,7 +80,7 @@ console.log("Do I still have time to eat something before work " +
 	{
 		console.log("Oh no! I have to leave right now!");
 	}
-console.log(bananaSlices(numberOfBananas));			
+console.log(brewCoffee(numberOfMinutes));	
 
 /*
 string function (2 string arguments to be passed)
