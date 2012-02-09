@@ -14,7 +14,8 @@ var amandaConversation1 = "Is the coffee ready? ",
 	amandaConversation2 = "I have to leave here in 10 minutes!";
 
 var itemsForWorkArray = ["badge", "wallet", "cell-Phone", "tools"];
-var numberOfElements = 3;
+var numberInArray = 2;
+
 
 
 // First function asks if my cat scooter has jumped on me to wake me up
@@ -76,12 +77,15 @@ var conversation = function(first, second)
 	return stringTotalConversation;
 }
 
-var thingsNeededForWork = function(array[], number)
+
+
+var thingsITakeToWork = function(items, specificThing)
 {
-	for (i = 0;i > number; i++)
+	for (i = 0; i < 4; i++)
 	{
-		console.log(array[i]);
+		console.log(items[i]);
 	}
+	
 }
 
 
@@ -106,11 +110,8 @@ console.log("To start my morning, ill brew a cup of coffee which I check on ever
 			" two minutes.");
 console.log("For a total of " + brewCoffee(numberOfMinutes) + " times");	
 
-console.log("My wife asks " + conversation(amandaConversation1, amandaConversation2));
+console.log("My wife asks " + conversation(amandaConversation1, amandaConversation2))
 
-console.log(thingsNeededForWork(itemsForWorkArray,numberOfElements));
-
-
-
+thingsITakeToWork(itemsForWorkArray, numberInArray);
 
 	
