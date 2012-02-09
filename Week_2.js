@@ -46,19 +46,18 @@ var timeToGetReady = function(time)
 	return outcome;	
 }
 
-// function used to see how many banana slices I can make for my cereal
-// and to output "Keep slicing!" unless there are no more bananas!
+
 var bananaSlices = function(numberOfBananas)
 {
 	var totalNumber = 0;
-	var slicesPerBanana = 10;
+	var slicesPerBanana = 4;
 	while ((numberOfBananas * slicesPerBanana) > totalNumber )
 	{
 		console.log("keep slicing bananas!");
 		totalNumber++;
 	}
 	
-return 0;
+return totalNumber;
 }
 
 
@@ -79,7 +78,7 @@ console.log("Do I still have time to eat something before work " +
 	{
 		console.log("Oh no! I have to leave right now!");
 	}
-bananaSlices(numberOfBananas);			
+console.log(bananaSlices(numberOfBananas));			
 
 /*
 string function (2 string arguments to be passed)
