@@ -1,17 +1,14 @@
-// Start of actual project
+
 // Author: Cory Green
 // Date: 02/06/2012
-// Project: Week 2
+// Project: Week 2 - Me getting ready for the day.
 // Class: Scalable Data Infrastructures
 
-// Project has a main function in which all the functions will come back to an return
-// a data type or do something.
-// Will start with pseudocode that will actually get filled afterwards
-// Project is me getting out of bed and working towards the rest of my day.
 
+// variable declaration
 
-
-var theCurrentTime = 1500;
+var theCurrentTime = 1500, 
+	numberOfBananas = 2;
 
 
 
@@ -31,12 +28,13 @@ var getOutOfBed = function (scooter)
 	}
 }
 
-// Function used to see if I still have time to get ready for work 
+// Function used to see if I still have time to eat before work. 
 // since it is only 1500 and I leave for work at 1515, I do have time.
 var timeToGetReady = function(time)
 {
 	var outcome;
 	var timeToLeaveForWork = 1515;
+	
 	if (timeToLeaveForWork > time)
 	{	
 		outcome = true;
@@ -48,27 +46,29 @@ var timeToGetReady = function(time)
 	return outcome;	
 }
 
-
-
-/*
-number function ( one argument to be passed )
+// function used to see how many banana slices I can make for my cereal
+// and to output "Keep slicing!" unless there are no more bananas!
+var bananaSlices = function(numberOfBananas)
 {
-	declare local variables;
-	while (something is true)
+	var totalNumber = 0;
+	var slicesPerBanana = 10;
+	while ((numberOfBananas * slicesPerBanana) > totalNumber )
 	{
-		do some math;
-		output some text;
+		console.log("keep slicing bananas!");
+		totalNumber++;
 	}
 	
-return a value;
+return 0;
 }
-*/
+
 
 
 // main line of code, where all functions get called from and return to.
 getOutOfBed(true);
-console.log("Do I still have time to get ready for work " +
-			"Since its only " + theCurrentTime + "?");
+console.log("I work at 1600 hours");
+console.log("Do I still have time to eat something before work " +
+			"since its " + theCurrentTime + " hours?");
+			
 // using if statements, im able to actually do something with the 
 // boolean return of the timeToGetReady function.
 	if (timeToGetReady(theCurrentTime) === true)
@@ -79,7 +79,7 @@ console.log("Do I still have time to get ready for work " +
 	{
 		console.log("Oh no! I have to leave right now!");
 	}
-			
+bananaSlices(numberOfBananas);			
 
 /*
 string function (2 string arguments to be passed)
