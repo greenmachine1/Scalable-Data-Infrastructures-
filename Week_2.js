@@ -13,6 +13,8 @@ var theCurrentTime = 1500,
 var amandaConversation1 = "Is the coffee ready? ",
 	amandaConversation2 = "I have to leave here in 10 minutes!";
 
+var itemsForWorkArray = ["badge", "wallet", "cell-Phone", "tools"];
+var numberOfElements = 3;
 
 
 // First function asks if my cat scooter has jumped on me to wake me up
@@ -74,6 +76,16 @@ var conversation = function(first, second)
 	return stringTotalConversation;
 }
 
+var thingsNeededForWork = function(array[], number)
+{
+	for (i = 0;i > number; i++)
+	{
+		console.log(array[i]);
+	}
+}
+
+
+
 // main line of code, where all functions get called from and return to.
 getOutOfBed(true);
 console.log("I work at 1600 hours");
@@ -90,22 +102,15 @@ console.log("Do I still have time to eat something before work " +
 	{
 		console.log("Oh no! I have to leave right now!");
 	}
-console.log(brewCoffee(numberOfMinutes));	
+console.log("To start my morning, ill brew a cup of coffee which I check on every" +
+			" two minutes.");
+console.log("For a total of " + brewCoffee(numberOfMinutes) + " times");	
 
-console.log(conversation(amandaConversation1, amandaConversation2));
+console.log("My wife asks " + conversation(amandaConversation1, amandaConversation2));
+
+console.log(thingsNeededForWork(itemsForWorkArray,numberOfElements));
 
 
-/*
 
-array function ( 1 number and 1 array to be passed in)
-{
-	for loop;
-	{
-		do some math;
-		output that math;
-	}
-	return array values;
-}
 
-*/
 	
