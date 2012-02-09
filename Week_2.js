@@ -1,4 +1,3 @@
-
 // Author: Cory Green
 // Date: 02/06/2012
 // Project: Week 2 - Me getting ready for the day.
@@ -78,20 +77,25 @@ var conversation = function(first, second)
 }
 
 
-
+// the things I take to work array.
 var thingsITakeToWork = function(items, specificThing)
 {
 	for (i = 0; i < 4; i++)
 	{
 		console.log(items[i]);
 	}
-	
+	console.log("But I forgot my ");
+	return items[specificThing];
 }
 
 
 
 // main line of code, where all functions get called from and return to.
+console.log("My cat will usually come sit on my chest in the morning when " +
+			"He feels its time for me to get up.");
+			
 getOutOfBed(true);
+
 console.log("I work at 1600 hours");
 console.log("Do I still have time to eat something before work " +
 			"since its " + theCurrentTime + " hours?");
@@ -111,7 +115,7 @@ console.log("To start my morning, ill brew a cup of coffee which I check on ever
 console.log("For a total of " + brewCoffee(numberOfMinutes) + " times");	
 
 console.log("My wife asks " + conversation(amandaConversation1, amandaConversation2))
-
-thingsITakeToWork(itemsForWorkArray, numberInArray);
+console.log("The things I pack for work are ");
+console.log(thingsITakeToWork(itemsForWorkArray, numberInArray) + " This time");
 
 	
