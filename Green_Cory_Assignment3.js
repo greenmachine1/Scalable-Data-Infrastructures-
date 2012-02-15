@@ -13,31 +13,27 @@ var goingToPractice = function()
 
 
 
-// displaying the band members!
-var bandPracticeMembers = function(bandMembers)
+// displaying the band members! Return the member who is not here yet
+// added a variable for return the member who is not here yet.
+var bandPracticeMembers = function(bandMembers, notPresent)
 {
 	for (var i = 0, j = bandMembers.length; i < j; i++)
 	{
-		console.log(bandMembers[i]);
+		var members = bandMembers[i];
+		console.log(members);
 	}
+	return bandMembers[notPresent];
 }
-
-
-
-
-
-
-
-
-
-
 
 
 // main program
 var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"];
+var bandMemberNotPresent = 2;
 
 goingToPractice();
-console.log(bandPracticeMembers(bandMemberArray));
+console.log("My band mates are ");
+console.log("But " + bandPracticeMembers(bandMemberArray, bandMemberNotPresent)
+			+ " is not here yet");
 
 
 
