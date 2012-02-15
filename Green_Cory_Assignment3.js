@@ -15,6 +15,7 @@ var goingToPractice = function()
 
 // displaying the band members! Return the member who is not here yet
 // added a variable for return the member who is not here yet.
+
 var bandPracticeMembers = function(bandMembers, notPresent)
 {
 	for (var i = 0, j = bandMembers.length; i < j; i++)
@@ -25,49 +26,38 @@ var bandPracticeMembers = function(bandMembers, notPresent)
 	return bandMembers[notPresent];
 }
 
+// seing if I have a backup guitar in my car function.
+
+var bringSecondGuitar = function(answer)
+{
+	var returnValue;
+	if (answer === true)
+	{
+		returnValue = 1;
+	}
+	else
+	{
+		returnValue = 0;
+	}
+	return returnValue;
+}
+
+
 
 // main program
+// global variables
 var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"];
 var bandMemberNotPresent = 2;
+var backUp = true;
 
+// main program functions
 goingToPractice();
 console.log("My band mates are ");
-console.log("But " + bandPracticeMembers(bandMemberArray, bandMemberNotPresent)
-			+ " is not here yet");
+console.log("Ive just been informed that " + bandPracticeMembers( bandMemberArray, bandMemberNotPresent )
+			+ " will be late to practice.");
+console.log("So we start to setup without him for the time being");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-// making object ball
-var ball = { 
-	size: 10, 
-	color: "red", 
-	lettering: "Green",
-	
-	sayHi: function ()
-	{
-		console.log("Hello!");
-	}
-};
-
-console.log(ball.size);
-console.log(ball.color);
-console.log(ball.lettering);
-console.log(ball.size * 3.1);
-
-
-
-ball.sayHi();
-*/
+console.log("I have to go out to my car's trunk to check how many backup guitars I have " +
+			"for practice today");
+			
+console.log( "I do indeed have " + bringSecondGuitar( backUp ) + " guitar as a backup for practice");
