@@ -4,6 +4,20 @@
 // Project: Band Practice
 
 
+// creat guitar object
+var guitar = {
+	brand: "Jackson",
+	strings: "medium",
+	color: "blue",
+	orientation: "right",
+	
+	play: function(song)
+		{	
+			console.log("playing a song");
+		}
+}
+	
+
 
 // Function for going to band practice
 var goingToPractice = function()
