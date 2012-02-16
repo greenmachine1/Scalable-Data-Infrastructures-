@@ -93,7 +93,7 @@ var guitarHumming = function(guitarHumObject)
 
 // main program
 // global variables
-var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"],
+var bandMemberArray = ["Travis", "Kenny", "Mike", "and myself"],
  	bandMemberNotPresent = 2,
  	guitarYes = true,
  	stringYes = false,
@@ -138,9 +138,8 @@ console.log("While " + bandMemberArray[0] + '\'s is a '
 // outputting the types of music these guitars are made for
 console.log("The types of music that both of these guitars are made for are " + guitar.typeOfMusicMadeFor);
 
-//calling on guitar hum function
+//calling on guitar hum function with guitar.hum object as argument
 guitarHumming(guitar.hum);
-
 
 // outputting what type of song we are to play
 guitar.play(nameOfSong) + console.log("Once our singer gets back");
