@@ -17,8 +17,11 @@ var guitar = {
 	play: function(song)
 		{	
 			console.log("We will be playing " + song);
+		},
+	hum: function(humming)
+		{
+			return humming;
 		}
-
 }
 	
 // Function for going to band practice
@@ -71,6 +74,10 @@ var practiceSong = function(time)
 	return count;
 }
 
+var endingWords = function(string1, string2)
+{
+	return string1 + string2;
+}
 
 
 
@@ -82,6 +89,9 @@ var guitarYes = true;
 var stringYes = true;
 var nameOfSong = "Summer song";
 var time = 1725;
+var guitarHum = true;
+var travisWords = "Great practice guys!";
+var coryWords = " Yeah, I had a great time!";
 
 
 
@@ -101,14 +111,14 @@ console.log("I have to go out to my car and see if I have another guitar and a s
 
 
 // using if statement for the boolean function return
-if(bringSecondGuitar(guitarYes, stringYes) === true)
-{
-	console.log("I do indeed have both an extra guitar and spare strings!");
-}
-else
-{
-	console.log("I dont have an extra guitar");
-}
+	if(bringSecondGuitar(guitarYes, stringYes) === true)
+	{
+		console.log("I do indeed have both an extra guitar and spare strings!");
+	}
+	else
+	{
+		console.log("I dont have an extra guitar");
+	}
 
 // manipulation of the guitar object - accessor and mutator
 console.log("My main guitar is a " + guitar.brand +" " + guitar.model + ".");
@@ -118,8 +128,21 @@ console.log("While " + bandMemberArray[0] + '\'s is a '
 // outputting the types of music these guitars are made for
 console.log("The types of music that both of these guitars are made for are " + guitar.typeOfMusicMadeFor);
 
+//calling on guitar hum function
+	if (guitar.hum(guitarHum) === true)
+	{
+		console.log("my guitar is humming because of the high gain of my amp");
+	}
+	else
+	{
+		console.log("I must have my gain set on low because my amp isnt humming");
+	}
+
+
 // outputting what type of song we are to play
 guitar.play(nameOfSong) + console.log("Once our singer gets back");
 
 // using a loop to output how many times we had to play this song
-console.log(practiceSong(time) +  " times we played this song before we got it right!");
+console.log(practiceSong(time) +  " times we played this song before it was time to leave!");
+
+console.log(endingWords(travisWords, coryWords));
