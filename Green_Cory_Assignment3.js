@@ -4,28 +4,31 @@
 // Project: Band Practice
 
 
-// creat guitar object
+// create guitar object
 var guitar = {
 	brand: "Jackson",
+	model: "Dinky",
 	strings: "medium",
+	numberOfStrings: 6,
+	typeOfMusicMadeFor: ["hard rock", "metal", "neo-classical"],
+	doesItRock: true,
 	color: "blue",
 	orientation: "right",
 	
-	play: function()
+	
+	// guitar object functions
+	play: function(song)
 		{	
-			console.log("playing a song");
+			console.log("playing " + song);
 		}
+
 }
 	
-
-
 // Function for going to band practice
 var goingToPractice = function()
 {
 	console.log("Every Monday at 5:30, I leave my house to go to band practice");
 }
-
-
 
 // displaying the band members! Return the member who is not here yet
 // added a variable for return the member who is not here yet.
@@ -77,6 +80,22 @@ console.log("Ive just been informed that " + bandPracticeMembers( bandMemberArra
 console.log("So we start to setup without him for the time being");
 
 // call on the bring guitar function (boolean)
-console.log("I have to go out to my car to see if I have another guitar and a set of strings to go with it");
-console.log("As it turns out I " + bringSecondGuitar(guitarYes, stringYes));
+console.log("I have to go out to my car and see if I have another guitar and a set of strings to go with it");
+
+
+// using if statement for the boolean function return
+if(bringSecondGuitar(guitarYes, stringYes) === true)
+{
+	console.log("I do indeed have both an extra guitar and spare strings!");
+}
+else
+{
+	console.log("I dont have an extra guitar");
+}
+
+// manipulation of the guitar object
+console.log("My main guitar is a " + guitar.brand +" " + guitar.model + ".");
+console.log("While " + bandMemberArray[0] + '\'s is a ' 
+					 + (guitar.brand = "PRS") + (guitar.model = " Torreno"));
+
 
