@@ -11,16 +11,13 @@ var guitar = {
 	strings: "medium",
 	typeOfMusicMadeFor: ["hard rock" , " metal" ," and neo-classical."],
 	doesItRock: true,
+	hum: true,
 	
 	
-	// guitar object functions
+// guitar object functions
 	play: function(song)
 		{	
 			console.log("We will be playing " + song);
-		},
-	hum: function(humming)
-		{
-			return humming;
 		}
 }
 	
@@ -79,19 +76,32 @@ var endingWords = function(string1, string2)
 	return string1 + string2;
 }
 
+// guitar humming function with access to object variable
+var guitarHumming = function(guitarHumObject)
+{
+	if (guitarHumObject === true)
+	{
+		console.log("My guitar is humming because of the high gain of my amp!");
+	}
+	else
+	{
+		console.log("I must have my amp gain low because my guitar is not humming!");
+	}
+}
+
 
 
 // main program
 // global variables
-var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"];
-var bandMemberNotPresent = 2;
-var guitarYes = true;
-var stringYes = true;
-var nameOfSong = "Summer song";
-var time = 1725;
-var guitarHum = true;
-var travisWords = "Great practice guys!";
-var coryWords = " Yeah, I had a great time!";
+var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"],
+ 	bandMemberNotPresent = 2,
+ 	guitarYes = true,
+ 	stringYes = false,
+ 	nameOfSong = "Summer song",
+ 	time = 1725,
+ 	travisWords = "Great practice guys!",
+ 	coryWords = " Yeah, I had a great time!";
+ 	
 
 
 
@@ -129,14 +139,7 @@ console.log("While " + bandMemberArray[0] + '\'s is a '
 console.log("The types of music that both of these guitars are made for are " + guitar.typeOfMusicMadeFor);
 
 //calling on guitar hum function
-	if (guitar.hum(guitarHum) === true)
-	{
-		console.log("my guitar is humming because of the high gain of my amp");
-	}
-	else
-	{
-		console.log("I must have my gain set on low because my amp isnt humming");
-	}
+guitarHumming(guitar.hum);
 
 
 // outputting what type of song we are to play
