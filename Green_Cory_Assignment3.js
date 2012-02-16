@@ -9,17 +9,14 @@ var guitar = {
 	brand: "Jackson",
 	model: "Dinky",
 	strings: "medium",
-	numberOfStrings: 6,
-	typeOfMusicMadeFor: ["hard rock", "metal", "neo-classical"],
+	typeOfMusicMadeFor: ["hard rock" , " metal" ," and neo-classical."],
 	doesItRock: true,
-	color: "blue",
-	orientation: "right",
 	
 	
 	// guitar object functions
 	play: function(song)
 		{	
-			console.log("playing " + song);
+			console.log("We will be playing " + song);
 		}
 
 }
@@ -60,6 +57,22 @@ var bringSecondGuitar = function(guitarYes, stringYes)
 }
 
 
+// how many times we need to practice a song with the time we have left.
+var practiceSong = function(time)
+{	
+	var timeToStop = 1755;
+	var count = 0;
+	while(time < timeToStop)
+	{
+		console.log("play it again!");
+		time += 5;
+		count++;
+	}
+	return count;
+}
+
+
+
 
 // main program
 // global variables
@@ -67,6 +80,10 @@ var bandMemberArray = ["Travis", "Kenny", "Mike", "Cory"];
 var bandMemberNotPresent = 2;
 var guitarYes = true;
 var stringYes = true;
+var nameOfSong = "Summer song";
+var time = 1725;
+
+
 
 // main program functions
 goingToPractice();
@@ -93,9 +110,16 @@ else
 	console.log("I dont have an extra guitar");
 }
 
-// manipulation of the guitar object
+// manipulation of the guitar object - accessor and mutator
 console.log("My main guitar is a " + guitar.brand +" " + guitar.model + ".");
 console.log("While " + bandMemberArray[0] + '\'s is a ' 
 					 + (guitar.brand = "PRS") + (guitar.model = " Torreno"));
 
+// outputting the types of music these guitars are made for
+console.log("The types of music that both of these guitars are made for are " + guitar.typeOfMusicMadeFor);
 
+// outputting what type of song we are to play
+guitar.play(nameOfSong) + console.log("Once our singer gets back");
+
+// using a loop to output how many times we had to play this song
+console.log(practiceSong(time) +  " times we played this song before we got it right!");
