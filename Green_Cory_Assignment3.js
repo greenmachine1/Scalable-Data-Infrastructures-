@@ -89,7 +89,16 @@ var guitarHumming = function(guitarHumObject)
 	}
 }
 
-
+// json data
+var upcomingShows = function (json)
+{
+	for (var i = 0; i < json.shows.length; i++)
+	{
+		var show = json.shows[i];
+		console.log("venue: " + show.venue + " show: " + show.show + " date: " +
+		show.date);
+	}
+}
 
 // main program
 // global variables
@@ -102,9 +111,6 @@ var bandMemberArray = ["Travis", "Kenny", "Mike", "and myself"],
  	travisWords = "Great practice guys!",
  	coryWords = " Yeah, I had a great time!";
  	
-
-
-
 // main program functions
 goingToPractice();
 
@@ -146,5 +152,10 @@ guitar.play(nameOfSong) + console.log("Once our singer gets back");
 
 // using a loop to output how many times we had to play this song
 console.log(practiceSong(time) +  " times we played this song before it was time to leave!");
+
+console.log("Before we all leave, we should talk about upcoming shows");
+
+// upcoming shows feed
+upcomingShows(json);
 
 console.log(endingWords(travisWords, coryWords));
