@@ -35,5 +35,22 @@
 
 // find the number of hours or days difference between two dates
 // setup a function to hold to arguments and find their differences
+// 
 
+var differenceDate = function(firstDate, secondDate)
+{
+	var hoursInADay = 24;
+	
+	// days in a month array 31,28,31,30,31,30,31,31,30,31,30,31
+	var daysInAMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	var Jan = 0, feb = 1, mar = 2, apr = 3, may = 4, june = 5, july = 6, aug = 7, sept = 8, oct = 9,
+		nov = 10, dec = 11;
+	var difference = secondDate - firstDate;
+	return difference;
+}
+
+var first = 10, second = 31;
+
+// call on the differenceDate function.
+console.log(differenceDate(first,second));
 				
