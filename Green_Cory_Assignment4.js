@@ -40,18 +40,19 @@
 // comment, use the day of the month as a multiplier.
 // exe january = 1, feb = 2.. etc
 // so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
-var differenceDate = function(firstDate, first, secondDate, second)
+
+var differenceDate = function(firstDate, secondDate)
 {
-	return second - first;
+	var dateArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+					 "Ocbtober", "November", "December"];
+	var dateNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+	
+	var dateDaysOfWeek = [30, 28, 30, 31, 30, 31, 31, 30, 31, 30, 31, 30];
+	
+	
 }
 
-var firstDate = "march ";
-var first = 20;
-var secondDate = "July ";
-var second = 31;
 
-console.log("The difference between " + firstDate + first + " and " +
-			secondDate + second + " is " + differenceDate(firstDate, first, secondDate, second) + " days.");
 
 
 
