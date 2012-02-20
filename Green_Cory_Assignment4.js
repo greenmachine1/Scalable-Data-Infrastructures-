@@ -37,11 +37,22 @@
 // setup a function to hold to arguments and find their differences
 // 
 
-var differenceDate = function(firstDate, secondDate)
+// comment, use the day of the month as a multiplier.
+// exe january = 1, feb = 2.. etc
+// so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
+var differenceDate = function(firstDate, first, secondDate, second)
 {
-	var difference = secondDate - firstDate;
-	return difference;
+	return second - first;
 }
 
+var firstDate = "march ";
+var first = 20;
+var secondDate = "July ";
+var second = 31;
 
-console.log("The difference between the two is : " + differenceDate(9, 34));
+console.log("The difference between " + firstDate + first + " and " +
+			secondDate + second + " is " + differenceDate(firstDate, first, secondDate, second) + " days.");
+
+
+
+
