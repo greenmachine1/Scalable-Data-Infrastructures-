@@ -4,6 +4,33 @@
 	Project : Week 4
 	
 */
+// find the number of hours or days difference between two dates
+// setup a function to hold to arguments and find their differences
+
+// comment, use the day of the month as a multiplier.
+// exe january = 1, feb = 2.. etc
+// so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
+
+var differenceDate = function(month1, firstDate, month2, secondDate)
+{
+	var dateArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+					 "Ocbtober", "November", "December"];
+	var dateNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+	
+	var dateDaysOfWeek = [30, 28, 30, 31, 30, 31, 31, 30, 31, 30, 31, 30];
+	
+
+	console.log(dateArray[month1], firstDate, dateArray[month2], secondDate);
+	
+	// returning the difference between the two dates.
+	var difference = ((dateNumber[month2] * dateDaysOfWeek[month2]) + secondDate) - 
+					 ((dateNumber[month1] * dateDaysOfWeek[month1] + firstDate));
+	return difference;
+}
+
+console.log(differenceDate(1, 1, 2, 1));
+
+
 
 /* objectives - Does a string follow a 123-456-7890 pattern like a phone number?
 
@@ -32,27 +59,6 @@
 				in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
 				
 */
-
-// find the number of hours or days difference between two dates
-// setup a function to hold to arguments and find their differences
-// 
-
-// comment, use the day of the month as a multiplier.
-// exe january = 1, feb = 2.. etc
-// so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
-
-var differenceDate = function(firstDate, secondDate)
-{
-	var dateArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-					 "Ocbtober", "November", "December"];
-	var dateNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-	
-	var dateDaysOfWeek = [30, 28, 30, 31, 30, 31, 31, 30, 31, 30, 31, 30];
-	
-	
-}
-
-
 
 
 
