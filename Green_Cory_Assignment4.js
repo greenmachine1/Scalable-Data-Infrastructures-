@@ -36,11 +36,12 @@ var checkPhoneNumber = function(phoneNumber)
 // function used to check whether or not an email has the correct .com ending
 var checkEmailAddress = function(eMail)
 {
-	var dotCom = (eMail.length - 4); 								// used to hold the length of the string minus 4 for the .com ending
-	console.log(dotCom);			 								// displays the dotCom number
-	console.log(eMail.length + " " + eMail);						// displays the length + the email given
+	var dotCom = (eMail.length - 4); 												// used to hold the length of the string minus 4 for the .com ending
+	console.log(dotCom);			 												// displays the dotCom number
+	console.log(eMail.length + " " + eMail);										// displays the length + the email given
 	
-	if (eMail.substring(dotCom, (dotCom + 1)) === ".")				// decides whether or not the email has a .com ending
+	// decides whether or not the email has the required "." and also if the email has @.
+	if ((eMail.substring(dotCom, (dotCom + 1)) === ".") && (eMail.indexOf("@") !== -1))				
 	{	
 		console.log("This is correct!");
 	}
@@ -83,7 +84,7 @@ myPhone1 + checkPhoneNumber(myPhone1);
 myPhone2 + checkPhoneNumber(myPhone2);
 
 checkEmailAddress("Thingy_shouldnt_Be@hotmail.com");
-checkEmailAddress("Thingy_should@yahoo.com");
+checkEmailAddress("Thingy_shouldyahoo.com");
 checkEmailAddress("This_is_not_An_email@this");
 
 var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
