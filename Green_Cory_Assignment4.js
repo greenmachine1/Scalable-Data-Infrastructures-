@@ -11,24 +11,33 @@
 // exe january = 1, feb = 2.. etc
 // so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
 
-var differenceDate = function(month1, firstDate, month2, secondDate)
+/*var differenceDate = function(firstDate, secondDate)
 {
-	var dateArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-					 "Ocbtober", "November", "December"];
-	var dateNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+	// this function needs to take the two days passed to it and find the difference.
 	
-	var dateDaysOfWeek = [30, 28, 30, 31, 30, 31, 31, 30, 31, 30, 31, 30];
-	
-
-	console.log(dateArray[month1], firstDate, dateArray[month2], secondDate);
-	
-	// returning the difference between the two dates.
-	var difference = ((dateNumber[month2] * dateDaysOfWeek[month2]) + secondDate) - 
-					 ((dateNumber[month1] * dateDaysOfWeek[month1] + firstDate));
-	return difference;
+	var 
 }
+*/
 
-console.log(differenceDate(1, 1, 2, 1));
+
+
+var checkString = function(url)
+{
+
+	if (url.substring(4,5) === ":")
+	{
+		console.log("This is the correct format!");
+	}
+	else
+	{
+		console.log("This is not the correct format");
+	}
+	
+}
+var myUrl = "http://hello.com";	
+
+checkString(myUrl);
+
 
 
 
