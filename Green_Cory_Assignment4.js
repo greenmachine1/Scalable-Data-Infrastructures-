@@ -60,24 +60,18 @@ var checkEmailAddress = function(eMail)
 // function used to sort the array.. the last number will be the smallest number in the array
 var lowestNumber = function(arraySet,number)
 {
-	var temp1, temp2, temp3;
-	for (var i = 0, j = arraySet.length; i < j; i++)
+	var count = 0;
+	while (count < arraySet.length)
 	{
-		temp1 = arraySet[i];
-		for(var a = 0, b = arraySet.length; a < b; a++)
-		{
-			temp2 = arraySet[a + 1];
-			if(temp1 < temp2)
+			if(arraySet[count] === number)
 			{
-				temp3 = temp1;
+				return arraySet[count];
 			}
 			else
 			{
-				temp3 = temp2;
-			}		
-		}
-	}	
-	return temp3;
+				count++;
+			}
+	}
 }
 
 
@@ -91,8 +85,8 @@ var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
 
-var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
-var numberToLookFor = 2;
+var arraySet = [122, 5, 7, 10, 4, 65, 0, 1000, 21300, 1, 90]; 
+var numberToLookFor = 90;
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
