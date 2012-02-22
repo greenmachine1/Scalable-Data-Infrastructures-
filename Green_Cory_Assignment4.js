@@ -57,20 +57,30 @@ var checkEmailAddress = function(eMail)
 
 // return the smallest number in an array
 
-var smallestNumberInArray = function(numbers, setNumber)
+// function used to sort the array.. the last number will be the smallest number in the array
+var lowestNumber = function(arraySet,number)
 {
-	for (var i = 0, j = numbers.length; i < j; i++)
+	var temp1, temp2, temp3;
+	for (var i = 0, j = arraySet.length; i < j; i++)
 	{
-		if (numbers[i] > setNumber)
+		temp1 = arraySet[i];
+		for(var a = 0, b = arraySet.length; a < b; a++)
 		{
-			return numbers[i];
+			temp2 = arraySet[a + 1];
+			if(temp1 < temp2)
+			{
+				temp3 = temp1;
+			}
+			else
+			{
+				temp3 = temp2;
+			}		
 		}
-		else
-		{
-			return 0;
-		}
-	}
+	}	
+	return temp3;
 }
+
+
 
 
 var myUrl = "https://hello.com";
@@ -80,6 +90,9 @@ var myUrl2 = "http://hello.com";
 var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
+
+var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
+var numberToLookFor = 2;
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -93,9 +106,7 @@ console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
 console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
-var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
-
-console.log(smallestNumberInArray(arraySet, 3));
+console.log(lowestNumber(arraySet, numberToLookFor));
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
