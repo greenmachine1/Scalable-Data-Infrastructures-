@@ -2,48 +2,53 @@
 	Date : 02/19/2012
 	Class : Scalable Data Infrastructures
 	Project : Week 4
-	
 */
-// find the number of hours or days difference between two dates
-// setup a function to hold to arguments and find their differences
-
-// comment, use the day of the month as a multiplier.
-// exe january = 1, feb = 2.. etc
-// so if you have 30 days in the month, use feb as a multiplier of 2 for a total of + 60 days.
-
-/*var differenceDate = function(firstDate, secondDate)
-{
-	// this function needs to take the two days passed to it and find the difference.
-	
-	var 
-}
-*/
-
-
 
 // url checking function
-var checkString = function(url)
+var checkStringUrl = function(url)
 {
 
 	if (url.substring(0,5) === "http:" || url.substring(0, 6) === "https:")
 	{
-		console.log("This is the correct format!");
+		console.log("This is a URL");
 	}
 	else
 	{
-		console.log("This is not the correct format");
+		console.log("This is not a URl");
 	}
 	
 }
+
+// phone number checking program
+var checkPhoneNumber = function(phoneNumber)
+{
+	if (phoneNumber.substring(3, 4) === "-" && phoneNumber.substring(7, 8) === "-")
+	{
+		console.log(phoneNumber + " This is a phone number");
+	}
+	else
+	{
+		console.log(phoneNumber + " This is not a phone number");
+	}
+}
+
+
+
 var myUrl = "https://hello.com";
 var myUrl1 = "http//hello.com";
 var myUrl2 = "http://hello.com";
 
-checkString(myUrl);
-checkString(myUrl1);
-checkString(myUrl2);
+var myPhone = "586-332-0001";
+var myPhone1 = "22123-45121";
+var myPhone2 = "221-4444443";
 
+console.log(myUrl + checkStringUrl(myUrl));
+console.log(myUrl1 + checkStringUrl(myUrl1));
+console.log(myUrl2 + checkStringUrl(myUrl2));
 
+(myPhone + checkPhoneNumber(myPhone));
+(myPhone1 + checkPhoneNumber(myPhone1));
+(myPhone2 + checkPhoneNumber(myPhone2));
 
 
 /* objectives - Does a string follow a 123-456-7890 pattern like a phone number?
