@@ -21,10 +21,11 @@
 
 
 
+// url checking function
 var checkString = function(url)
 {
 
-	if (url.substring(4,5) === ":")
+	if (url.substring(0,5) === "http:" || url.substring(0, 6) === "https:")
 	{
 		console.log("This is the correct format!");
 	}
@@ -34,9 +35,13 @@ var checkString = function(url)
 	}
 	
 }
-var myUrl = "http://hello.com";	
+var myUrl = "https://hello.com";
+var myUrl1 = "http//hello.com";
+var myUrl2 = "http://hello.com";
 
 checkString(myUrl);
+checkString(myUrl1);
+checkString(myUrl2);
 
 
 
