@@ -10,11 +10,11 @@ var checkStringUrl = function(url)
 
 	if (url.substring(0,5) === "http:" || url.substring(0, 6) === "https:")
 	{
-		console.log("This is a URL");
+		return true;
 	}
 	else
 	{
-		console.log("This is not a URl");
+		return false;
 	}
 	
 }
@@ -24,11 +24,11 @@ var checkPhoneNumber = function(phoneNumber)
 {
 	if (phoneNumber.substring(3, 4) === "-" && phoneNumber.substring(7, 8) === "-")
 	{
-		console.log(phoneNumber + " This is a phone number");
+		return true;
 	} 
 	else 
 	{
-		console.log(phoneNumber + " This is not a phone number");
+		return false;
 	}
 }
 
@@ -36,32 +36,38 @@ var checkPhoneNumber = function(phoneNumber)
 // function used to check whether or not an email has the correct .com ending
 var checkEmailAddress = function(eMail)
 {
-	var dotCom = (eMail.length - 4); 												// used to hold the length of the string minus 4 for the .com ending
-	console.log(dotCom);			 												// displays the dotCom number
-	console.log(eMail.length + " " + eMail);										// displays the length + the email given
+	var dotCom = (eMail.length - 4); 						// used to hold the length of the string minus 4 for the .com ending
+	
+	/*console.log(dotCom);			 						// displays the dotCom number
+	console.log(eMail.length + " " + eMail);				// displays the length + the email given
+	*/
 	
 	// decides whether or not the email has the required "." and also if the email has @.
+	// email.indexOf("@") means to look for the @ sign and if it is not there, to return -1
 	if ((eMail.substring(dotCom, (dotCom + 1)) === ".") && (eMail.indexOf("@") !== -1))				
 	{	
-		console.log("This is correct!");
+		return true;
 	}
 	else
 	{
-		console.log("This isnt correct!");
+		return false;
 	}
 	
 }
 
 // return the smallest number in an array
+
 var smallestNumberInArray = function(numbers, setNumber)
 {
-	var returnNumber;
 	for (var i = 0, j = numbers.length; i < j; i++)
 	{
-		console.log(numbers[i]);
-		if(numbers[i] > setNumber)
+		if (numbers[i] > setNumber)
 		{
-			returnNumber = numbers[i]; 
+			return numbers[i];
+		}
+		else
+		{
+			return 0;
 		}
 	}
 }
@@ -75,21 +81,21 @@ var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
 
-console.log(myUrl + checkStringUrl(myUrl));
-console.log(myUrl1 + checkStringUrl(myUrl1));
-console.log(myUrl2 + checkStringUrl(myUrl2));
+console.log(checkStringUrl(myUrl));
+console.log(checkStringUrl(myUrl1));
+console.log(checkStringUrl(myUrl2));
 
-myPhone + checkPhoneNumber(myPhone);
-myPhone1 + checkPhoneNumber(myPhone1);
-myPhone2 + checkPhoneNumber(myPhone2);
+console.log(checkPhoneNumber(myPhone));
+console.log(checkPhoneNumber(myPhone1));
+console.log(checkPhoneNumber(myPhone2));
 
-checkEmailAddress("Thingy_shouldnt_Be@hotmail.com");
-checkEmailAddress("Thingy_shouldyahoo.com");
-checkEmailAddress("This_is_not_An_email@this");
+console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
+console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
+console.log(checkEmailAddress("This_is_not_An_email@this"));
 
 var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
 
-smallestNumberInArray(arraySet, 3);
+console.log(smallestNumberInArray(arraySet, 3));
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
