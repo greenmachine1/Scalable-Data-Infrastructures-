@@ -20,13 +20,13 @@ var checkStringUrl = function(url)
 }
 
 // phone number checking program
-var checkPhoneNumber = function(phoneNumber)
+var checkPhoneNumber = function(phoneNumber) 
 {
 	if (phoneNumber.substring(3, 4) === "-" && phoneNumber.substring(7, 8) === "-")
 	{
 		console.log(phoneNumber + " This is a phone number");
-	}
-	else
+	} 
+	else 
 	{
 		console.log(phoneNumber + " This is not a phone number");
 	}
@@ -51,6 +51,20 @@ var checkEmailAddress = function(eMail)
 	
 }
 
+// return the smallest number in an array
+var smallestNumberInArray = function(numbers, setNumber)
+{
+	var returnNumber;
+	for (var i = 0, j = numbers.length; i < j; i++)
+	{
+		console.log(numbers[i]);
+		if(numbers[i] > setNumber)
+		{
+			returnNumber = numbers[i]; 
+		}
+	}
+}
+
 
 var myUrl = "https://hello.com";
 var myUrl1 = "http//hello.com";
@@ -72,11 +86,13 @@ checkEmailAddress("Thingy_shouldnt_Be@hotmail.com");
 checkEmailAddress("Thingy_should@yahoo.com");
 checkEmailAddress("This_is_not_An_email@this");
 
+var arraySet = [122, 5, 7, 10, 4, 65, 3, 1000, 21300, 1, 90]; 
 
+smallestNumberInArray(arraySet, 3);
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
-				Does a string follow an aaa@bbb.ccc pattern like an email address?
+				Done! Does a string follow an aaa@bbb.ccc pattern like an email address?
 				
 				Done! Is the string a URL? (Does it start with http: or https:?)
 				
