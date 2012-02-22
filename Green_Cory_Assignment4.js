@@ -33,6 +33,24 @@ var checkPhoneNumber = function(phoneNumber)
 }
 
 
+// function used to check whether or not an email has the correct .com ending
+var checkEmailAddress = function(eMail)
+{
+	var dotCom = (eMail.length - 4); 								// used to hold the length of the string minus 4 for the .com ending
+	console.log(dotCom);			 								// displays the dotCom number
+	console.log(eMail.length + " " + eMail);						// displays the length + the email given
+	
+	if (eMail.substring(dotCom, (dotCom + 1)) === ".")				// decides whether or not the email has a .com ending
+	{	
+		console.log("This is correct!");
+	}
+	else
+	{
+		console.log("This isnt correct!");
+	}
+	
+}
+
 
 var myUrl = "https://hello.com";
 var myUrl1 = "http//hello.com";
@@ -46,16 +64,21 @@ console.log(myUrl + checkStringUrl(myUrl));
 console.log(myUrl1 + checkStringUrl(myUrl1));
 console.log(myUrl2 + checkStringUrl(myUrl2));
 
-(myPhone + checkPhoneNumber(myPhone));
-(myPhone1 + checkPhoneNumber(myPhone1));
-(myPhone2 + checkPhoneNumber(myPhone2));
+myPhone + checkPhoneNumber(myPhone);
+myPhone1 + checkPhoneNumber(myPhone1);
+myPhone2 + checkPhoneNumber(myPhone2);
+
+checkEmailAddress("Thingy_shouldnt_Be@hotmail.com");
+checkEmailAddress("Thingy_should@yahoo.com");
+checkEmailAddress("This_is_not_An_email@this");
 
 
-/* objectives - Does a string follow a 123-456-7890 pattern like a phone number?
+
+/* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
 				Does a string follow an aaa@bbb.ccc pattern like an email address?
 				
-				Is the string a URL? (Does it start with http: or https:?)
+				Done! Is the string a URL? (Does it start with http: or https:?)
 				
 				Title-case a string (split into words, then uppercase the first letter of each word)
 				Given a string that is a list of things separated by a given string, as well as another 
