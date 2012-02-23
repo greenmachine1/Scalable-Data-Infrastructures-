@@ -81,6 +81,15 @@ var titleCase = function(mainString)
 	return upperFirst + " " + upperSecond;
 }
 
+var totalNumberOfArray = function(arrayNumbers)
+{
+	var total = 0;
+	for(var i = 0, j = arrayNumbers.length; i < j; i++)
+	{
+		total += arrayNumbers[i];
+	}
+	return total;
+}
 
 
 
@@ -97,6 +106,8 @@ var myPhone2 = "221-4444443";
 
 var firstDate = "March 21";
 var secondDate = "May 2";
+
+var myArray = [2, 7, 10, 90, 100, 2134, "name"];
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -115,7 +126,7 @@ console.log(titleCase("hello there!"));
 console.log(titleCase("hi amanda!"));
 console.log(titleCase("no other"));
 
-
+console.log(totalNumberOfArray(myArray));
 
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
@@ -124,7 +135,7 @@ console.log(titleCase("no other"));
 				
 				Done! Is the string a URL? (Does it start with http: or https:?)
 				
-				Title-case a string (split into words, then uppercase the first letter of each word)
+				Done! Title-case a string (split into words, then uppercase the first letter of each word)
 				
 				Given a string that is a list of things separated by a given string, as well as another 
 				string separator, return a string with the first separator changed to the second: "a,b,c" 
