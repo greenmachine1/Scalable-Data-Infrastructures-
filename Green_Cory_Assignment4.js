@@ -62,6 +62,15 @@ var differenceInDate = function(firstDate, secondDate)
 }
 
 
+// splitting a string then uppercasing the words
+// currently converts all characters to uppercase!  Nedds to be changed!
+var titleCase = function(mainString)
+{
+	console.log(mainString.indexOf(" "));
+	console.log(mainString.toUpperCase(mainString.charAt(0)) + mainString.substring(1));
+}
+
+
 /*// practice making a new object
 var newObject = new Object();
 newObject.make = "Ford";
@@ -97,6 +106,7 @@ console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
 differenceInDate(firstDate, secondDate);
+titleCase("Hellow There yello!");
 
 // accessing said object
 //console.log(newObject.model);
