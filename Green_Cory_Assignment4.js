@@ -63,21 +63,26 @@ var differenceInDate = function(firstDate, secondDate)
 
 
 // splitting a string then uppercasing the words
-// currently converts all characters to uppercase!  Nedds to be changed!
+// indexOf finds the index of a perticular character, whitespace in this case.
+// toUpperCase converts the letter to an uppercase letter.
 var titleCase = function(mainString)
 {
-	console.log(mainString.indexOf(" "));
-	console.log(mainString.toUpperCase(mainString.charAt(0)) + mainString.substring(1));
+	// used to detect the whitespace of the string.
+	var space = mainString.indexOf(" ");
+	
+	// used to store the first word in the string and uppercase the first letter
+	var upperFirst = (mainString.substring(0,1).toUpperCase() + mainString.substring(1, space));
+	
+	// used to store the second word in the string and uppercase the first letter
+	var upperSecond = (mainString.substring(space + 1, space + 2).toUpperCase() 
+					   + mainString.substring(space + 2, mainString.length));
+	
+	// returns the two words plus a white space in between.
+	return upperFirst + " " + upperSecond;
 }
 
 
-/*// practice making a new object
-var newObject = new Object();
-newObject.make = "Ford";
-newObject.model = "mustang";
-newObject.year = 1969;
 
-*/
 
 
 
@@ -105,11 +110,13 @@ console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
 console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
-differenceInDate(firstDate, secondDate);
-titleCase("Hellow There yello!");
 
-// accessing said object
-//console.log(newObject.model);
+console.log(titleCase("hello there!"));
+console.log(titleCase("hi amanda!"));
+console.log(titleCase("no other"));
+
+
+
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
@@ -118,6 +125,7 @@ titleCase("Hellow There yello!");
 				Done! Is the string a URL? (Does it start with http: or https:?)
 				
 				Title-case a string (split into words, then uppercase the first letter of each word)
+				
 				Given a string that is a list of things separated by a given string, as well as another 
 				string separator, return a string with the first separator changed to the second: "a,b,c" 
 				+ "," + "/" → "a/b/c".
