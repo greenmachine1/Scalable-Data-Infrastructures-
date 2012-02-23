@@ -4,6 +4,7 @@
 	Project : Week 4
 */
 
+
 // url checking function
 var checkStringUrl = function(url)
 {
@@ -55,24 +56,19 @@ var checkEmailAddress = function(eMail)
 	
 }
 
-// return the smallest number in an array
-
-// function used to sort the array.. the last number will be the smallest number in the array
-var lowestNumber = function(arraySet,number)
+var differenceInDate = function(firstDate, secondDate)
 {
-	var count = 0;
-	while (count < arraySet.length)
-	{
-			if(arraySet[count] === number)
-			{
-				return arraySet[count];
-			}
-			else
-			{
-				count++;
-			}
-	}
+	console.log(firstDate + " " + secondDate);
 }
+
+
+/*// practice making a new object
+var newObject = new Object();
+newObject.make = "Ford";
+newObject.model = "mustang";
+newObject.year = 1969;
+
+*/
 
 
 
@@ -85,8 +81,8 @@ var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
 
-var arraySet = [122, 5, 7, 10, 4, 65, 0, 1000, 21300, 1, 90]; 
-var numberToLookFor = 90;
+var firstDate = "March 21";
+var secondDate = "May 2";
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -100,7 +96,10 @@ console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
 console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
-console.log(lowestNumber(arraySet, numberToLookFor));
+differenceInDate(firstDate, secondDate);
+
+// accessing said object
+//console.log(newObject.model);
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
 
