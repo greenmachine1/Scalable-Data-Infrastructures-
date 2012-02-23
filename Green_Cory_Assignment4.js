@@ -3,7 +3,7 @@
 	Class : Scalable Data Infrastructures
 	Project : Week 4
 */
-java.util.Arrays;
+
 
 // url checking function
 var checkStringUrl = function(url)
@@ -57,50 +57,11 @@ var checkEmailAddress = function(eMail)
 }
 
 
-
-
-
-
-
-
-
-// function used to tell the difference between 2 days
-// 4 (april) 21 and 5 (may) 18
-/*var differenceInDate = function(firstMonth, firstDay, secondMonth, secondDay)
-{
-	var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-					 "Ocbober", "November", "December"];
-	var daysInMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-	
-	var userMonth1 = firstMonth - 1;
-	var userMonth2 = secondMonth - 1;
-	
-	var monthsInBetween = (userMonth2 - userMonth1) - 1;			// 0
-	var theMonthInBetweensValues = daysInMonths[monthsInBetween];		// 5 + 0 = 5
-	
-	// variables to hold the amount of days left in the month after the day inputed from the user
-	var daysInThatMonthLeft1 = daysInMonths[userMonth1] - firstDay;
-	var daysInThatMonthLeft2 = daysInMonths[userMonth2] - secondDay;
-	
-	var daysInBetween = daysInThatMonthLeft1 + daysInThatMonthLeft2;
-	
-	console.log(daysInThatMonthLeft1);
-	console.log(daysInThatMonthLeft2);
-	
-	
-	console.log(daysInBetween + monthsInBetween);
-	console.log(monthsInBetween);
-	console.log(theMonthInBetweensValues);
-	
-	
-
-}
-*/
 // 9, 7, 10, 90, 100, 2134
 // find the smallest number in an array
 var smallestNumberInArray = function(arraySet, number)
 {
-	var cache;
+	var cache;									// have to run through the array once before going into the for loop
 	if(arraySet[0] < arraySet[1])
 	{
 		cache = arraySet[0];
@@ -109,7 +70,7 @@ var smallestNumberInArray = function(arraySet, number)
 	{
 		cache = arraySet[1];
 	}
-	for(i = 2, j = arraySet.length; i < j; i++)
+	for(i = 2, j = arraySet.length; i < j; i++) // running through the array
 	{
 		if(arraySet[i] < cache)
 		{
@@ -122,17 +83,6 @@ var smallestNumberInArray = function(arraySet, number)
 	}
 	return cache;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // splitting a string then uppercasing the words
 // indexOf finds the index of a perticular character, whitespace in this case.
@@ -152,8 +102,6 @@ var titleCase = function(mainString)
 	// returns the two words plus a white space in between.
 	return upperFirst + " " + upperSecond;
 }
-
-
 
 // function used to add together all the elements in an array and return them
 var totalNumberOfArray = function(arrayNumbers)
@@ -181,7 +129,8 @@ var firstDay = 21;
 var secondDay = 18;
 
 
-var myArray = [9, 2, 10, 90, 100, 1];
+var myArray = [9, 2, 10, 0, 100, 1];
+var numberForArray = 10;
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -203,7 +152,7 @@ console.log(titleCase("no other"));
 
 console.log(totalNumberOfArray(myArray));
 
-console.log(smallestNumberInArray(myArray));
+console.log(smallestNumberInArray(myArray,numberForArray));
 
 
 
