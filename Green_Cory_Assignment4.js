@@ -3,7 +3,7 @@
 	Class : Scalable Data Infrastructures
 	Project : Week 4
 */
-
+java.util.Arrays;
 
 // url checking function
 var checkStringUrl = function(url)
@@ -64,23 +64,84 @@ var checkEmailAddress = function(eMail)
 
 
 
-
-var differenceInDate = function(firstDate, secondDate)
+// function used to tell the difference between 2 days
+// 4 (april) 21 and 5 (may) 18
+/*var differenceInDate = function(firstMonth, firstDay, secondMonth, secondDay)
 {
 	var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
 					 "Ocbober", "November", "December"];
 	var daysInMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-	for (var i = 0, j = daysInMonths.length; i < j; i++)
+	
+	var userMonth1 = firstMonth - 1;
+	var userMonth2 = secondMonth - 1;
+	
+	var monthsInBetween = (userMonth2 - userMonth1) - 1;			// 0
+	var theMonthInBetweensValues = daysInMonths[monthsInBetween];		// 5 + 0 = 5
+	
+	// variables to hold the amount of days left in the month after the day inputed from the user
+	var daysInThatMonthLeft1 = daysInMonths[userMonth1] - firstDay;
+	var daysInThatMonthLeft2 = daysInMonths[userMonth2] - secondDay;
+	
+	var daysInBetween = daysInThatMonthLeft1 + daysInThatMonthLeft2;
+	
+	console.log(daysInThatMonthLeft1);
+	console.log(daysInThatMonthLeft2);
+	
+	
+	console.log(daysInBetween + monthsInBetween);
+	console.log(monthsInBetween);
+	console.log(theMonthInBetweensValues);
+	
+	
+
+}
+*/
+// 9, 7, 10, 90, 100, 2134
+var smallestNumberInArray = function(arraySet, number)
+{
+	var cache;
+	if(arraySet[0] < arraySet[1])
 	{
-		console.log(monthName[i] + " " + daysInMonths[i]);
-		if(firstDate === monthName[i])
-		{
-			console.log("How many days in this month there are : " + daysInMonths[i]); 
-			console.log("That is the name of the month");
-		}
+		cache = arraySet[0];
 	}
-	var date = 10;
-	console.log(daysInMonths[1] - date);
+	else
+	{
+		cache = arraySet[1];
+	}
+	if(arraySet[2] < cache)
+	{
+		cache = arraySet[2];
+	}
+	else 
+	{
+		cache = cache;
+	}
+	if(arraySet[3] < cache)
+	{
+		cache = arraySet[3];
+	}
+	else
+	{
+		cache = cache;
+	}
+	if(arraySet[4] < cache)
+	{
+		cache = arraySet[4];
+	}
+	else
+	{
+		cache = cache;
+	}
+	if(arraySet[5] < cache)
+	{
+		cache = arraySet[5];
+	}
+	else
+	{
+		cache = cache;
+	}
+	return cache;
+	
 }
 
 
@@ -135,10 +196,13 @@ var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
 
-var firstDate = "March";
-var secondDate = "May";
+var firstMonth = 4;
+var secondMonth = 5;
+var firstDay = 21;
+var secondDay = 18;
 
-var myArray = [2, 7, 10, 90, 100, 2134];
+
+var myArray = [9, 7, 10, 90, 100, 2134];
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -152,7 +216,7 @@ console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
 console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
-differenceInDate(firstDate, secondDate);
+//differenceInDate(firstMonth, firstDay, secondMonth, secondDay);
 
 console.log(titleCase("hello there!"));
 console.log(titleCase("hi amanda!"));
@@ -160,6 +224,7 @@ console.log(titleCase("no other"));
 
 console.log(totalNumberOfArray(myArray));
 
+console.log(smallestNumberInArray(myArray));
 
 
 
