@@ -55,7 +55,7 @@ var checkEmailAddress = function(eMail)
 
 
 // find the smallest number in an array
-var smallestNumberInArray = function(arraySet, number)
+var smallestNumberInArray = function(arraySet)
 {
 	var cache;									
 	if(arraySet[0] < arraySet[1])
