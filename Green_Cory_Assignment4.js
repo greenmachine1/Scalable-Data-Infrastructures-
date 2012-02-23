@@ -97,6 +97,7 @@ var checkEmailAddress = function(eMail)
 }
 */
 // 9, 7, 10, 90, 100, 2134
+// find the smallest number in an array
 var smallestNumberInArray = function(arraySet, number)
 {
 	var cache;
@@ -108,40 +109,18 @@ var smallestNumberInArray = function(arraySet, number)
 	{
 		cache = arraySet[1];
 	}
-	if(arraySet[2] < cache)
+	for(i = 2, j = arraySet.length; i < j; i++)
 	{
-		cache = arraySet[2];
-	}
-	else 
-	{
-		cache = cache;
-	}
-	if(arraySet[3] < cache)
-	{
-		cache = arraySet[3];
-	}
-	else
-	{
-		cache = cache;
-	}
-	if(arraySet[4] < cache)
-	{
-		cache = arraySet[4];
-	}
-	else
-	{
-		cache = cache;
-	}
-	if(arraySet[5] < cache)
-	{
-		cache = arraySet[5];
-	}
-	else
-	{
-		cache = cache;
+		if(arraySet[i] < cache)
+		{
+			cache = arraySet[i];
+		}
+		else 
+		{
+			cache = cache;
+		}
 	}
 	return cache;
-	
 }
 
 
@@ -202,7 +181,7 @@ var firstDay = 21;
 var secondDay = 18;
 
 
-var myArray = [9, 7, 10, 90, 100, 2134];
+var myArray = [9, 2, 10, 90, 100, 1];
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -248,7 +227,7 @@ console.log(smallestNumberInArray(myArray));
 				
 				Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 				
-				Find the smallest value in an array that is greater than a given number
+				Done! Find the smallest value in an array that is greater than a given number
 				
 				Done! Find the total value of just the numbers in an array, even if some of the items are not numbers.
 				
