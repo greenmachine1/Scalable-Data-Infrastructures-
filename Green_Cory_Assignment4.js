@@ -56,10 +56,42 @@ var checkEmailAddress = function(eMail)
 	
 }
 
+
+
+
+
+
+
+
+
+
 var differenceInDate = function(firstDate, secondDate)
 {
-	console.log(firstDate + " " + secondDate);
+	var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+					 "Ocbober", "November", "December"];
+	var daysInMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	for (var i = 0, j = daysInMonths.length; i < j; i++)
+	{
+		console.log(monthName[i] + " " + daysInMonths[i]);
+		if(firstDate === monthName[i])
+		{
+			console.log("How many days in this month there are : " + daysInMonths[i]); 
+			console.log("That is the name of the month");
+		}
+	}
+	var date = 10;
+	console.log(daysInMonths[1] - date);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 // splitting a string then uppercasing the words
@@ -81,6 +113,8 @@ var titleCase = function(mainString)
 	return upperFirst + " " + upperSecond;
 }
 
+
+
 // function used to add together all the elements in an array and return them
 var totalNumberOfArray = function(arrayNumbers)
 {
@@ -93,10 +127,6 @@ var totalNumberOfArray = function(arrayNumbers)
 }
 
 
-
-
-
-
 var myUrl = "https://hello.com";
 var myUrl1 = "http//hello.com";
 var myUrl2 = "http://hello.com";
@@ -105,10 +135,10 @@ var myPhone = "586-332-0001";
 var myPhone1 = "22123-45121";
 var myPhone2 = "221-4444443";
 
-var firstDate = "March 21";
-var secondDate = "May 2";
+var firstDate = "March";
+var secondDate = "May";
 
-var myArray = [2, 7, 10, 90, 100, 2134, "name"];
+var myArray = [2, 7, 10, 90, 100, 2134];
 
 console.log(checkStringUrl(myUrl));
 console.log(checkStringUrl(myUrl1));
@@ -122,12 +152,15 @@ console.log(checkEmailAddress("Thingy_shouldnt_Be@hotmail.com"));
 console.log(checkEmailAddress("Thingy_shouldyahoo.com"));
 console.log(checkEmailAddress("This_is_not_An_email@this"));
 
+differenceInDate(firstDate, secondDate);
 
 console.log(titleCase("hello there!"));
 console.log(titleCase("hi amanda!"));
 console.log(titleCase("no other"));
 
 console.log(totalNumberOfArray(myArray));
+
+
 
 
 /* objectives - Done! Does a string follow a 123-456-7890 pattern like a phone number?
@@ -152,7 +185,7 @@ console.log(totalNumberOfArray(myArray));
 				
 				Find the smallest value in an array that is greater than a given number
 				
-				Find the total value of just the numbers in an array, even if some of the items are not numbers.
+				Done! Find the total value of just the numbers in an array, even if some of the items are not numbers.
 				
 				Given an array of objects and the name of a key, return the array sorted by the value of that key 
 				in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
