@@ -23,7 +23,7 @@ var checkStringUrl = function(url)
 // phone number checking program
 var checkPhoneNumber = function(phoneNumber) 
 {
-	if (phoneNumber.substring(3, 4) === "-" && phoneNumber.substring(7, 8) === "-")
+	if ((phoneNumber.substring(3, 4) === "-") && (phoneNumber.substring(7, 8) === "-"))
 	{
 		return true;
 	} 
@@ -81,6 +81,7 @@ var titleCase = function(mainString)
 	return upperFirst + " " + upperSecond;
 }
 
+// function used to add together all the elements in an array and return them
 var totalNumberOfArray = function(arrayNumbers)
 {
 	var total = 0;
